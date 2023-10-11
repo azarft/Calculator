@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="366.0" prefWidth="356.0" spacing="20.0" style="-fx-background-color: #83817d;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="welcomeText" />
+   <GridPane layoutX="30.0" layoutY="212.0" prefHeight="317.0" prefWidth="428.0">
+      <columnConstraints>
+         <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <children>
+         <TextField fx:id="inputField" prefHeight="32.0" prefWidth="316.0" style="-fx-background-color: #c2c1bf;" GridPane.columnSpan="5" />
+         <Button mnemonicParsing="false" onAction="#onButtonSevenClick" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #adb4ae; -fx-border-color: #847e7b;" text="7" GridPane.rowIndex="4" />
+         <Button layoutX="13.0" layoutY="75.0" mnemonicParsing="false" onAction="#onButtonNineClick" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #adb4ae; -fx-border-color: #847e7b;" text="9" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+         <Button layoutX="139.0" layoutY="75.0" mnemonicParsing="false" onAction="#onButtonSixClick" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #adb4ae; -fx-border-color: #847e7b;" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+         <Button layoutX="202.0" layoutY="75.0" mnemonicParsing="false" onAction="#onButtonOneClick" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #adb4ae; -fx-border-color: #847e7b;" text="1" GridPane.rowIndex="2" />
+         <Button layoutX="13.0" layoutY="128.0" mnemonicParsing="false" onAction="#onButtonThreeClick" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #adb4ae; -fx-border-color: #847e7b;" stylesheets="@../../../../../azar/style.css" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         <Button layoutX="139.0" layoutY="128.0" mnemonicParsing="false" onAction="#onButtonClearClick" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: #b7391b;" text="C" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+         <Button layoutX="202.0" layoutY="128.0" mnemonicParsing="false" onAction="#onButtonFourClick" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #adb4ae; -fx-border-color: #847e7b;" text="4" GridPane.rowIndex="3" />
+         <Button layoutX="13.0" layoutY="181.0" mnemonicParsing="false" onAction="#onButtonFiveClick" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #adb4ae; -fx-border-color: #847e7b;" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         <Button layoutX="202.0" layoutY="128.0" mnemonicParsing="false" onAction="#onButtonPlusClick" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: #e8c82c;" text="+" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+         <Button layoutX="202.0" layoutY="181.0" mnemonicParsing="false" onAction="#onButtonMinusClick" prefHeight="30.0" prefWidth="124.0" style="-fx-background-color: #e8c82c;" text="-" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+         <Button layoutX="13.0" layoutY="286.0" mnemonicParsing="false" onAction="#onButtonMultiplicationClick" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #e8c82c;" text="*" GridPane.rowIndex="5" />
+         <Button layoutX="76.0" layoutY="286.0" mnemonicParsing="false" onAction="#onButtonDivisionClick" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #e8c82c;" text="/" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+         <Button layoutX="139.0" layoutY="286.0" mnemonicParsing="false" onAction="#onButtonEqualClick" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: #e8c82c;" text="=" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+         <Button layoutX="13.0" layoutY="115.0" mnemonicParsing="false" onAction="#onButtonTwoClick" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #adb4ae; -fx-border-color: #847e7b;" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         <Button layoutX="76.0" layoutY="115.0" mnemonicParsing="false" onAction="#onButtonEightClick" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #adb4ae; -fx-border-color: #847e7b;" text="8" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         <Button mnemonicParsing="false" onAction="#onButtonZeroClick" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #adb4ae; -fx-border-color: #847e7b;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      </children>
+   </GridPane>
+</VBox>
