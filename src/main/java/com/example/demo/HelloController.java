@@ -84,15 +84,8 @@ public class HelloController {
 
         calc.calculate();
 
-        d = calc.getResult();
-        if (d == (int) d)
-        {
-            inputField.setText(Integer.toString((int) d));
-        }
-        else
-        {
-            inputField.setText(Double.toString(d));
-        }
+        String result = calc.getResult();
+        inputField.setText(result);
     }
 
     @FXML
