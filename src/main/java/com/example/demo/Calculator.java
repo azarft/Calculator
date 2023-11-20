@@ -6,27 +6,23 @@ public class Calculator {
     private double op1;
     private double op2;
     private char operator;
-    private String result;
+    private double result;
 
-    public void calculate(){
+    public void calculate() throws DivisionByZeroException {
         if(this.operator == '+') {
-            this.result = String.valueOf(this.op1 + this.op2);
+            this.result = this.op1 + this.op2;
         }
         if(this.operator == '-') {
-            this.result = String.valueOf(this.op1 - this.op2);
+            this.result = this.op1 - this.op2;
         }
         if(this.operator == '*') {
-            this.result = String.valueOf(this.op1 * this.op2);
+            this.result = this.op1 * this.op2;
         }
         if (this.operator == '/') {
-            try {
-                if (this.op2 == 0) {
-                    throw new DivisionByZeroException("Cannot divide by zero.");
-                }
-                this.result = String.valueOf(this.op1 / this.op2);
-            } catch (DivisionByZeroException ex) {
-                this.result = ex.getMessage();
+            if (this.op2 == 0) {
+                throw new DivisionByZeroException("Cannot divide by zero.");
             }
+            this.result = this.op1 / this.op2;
         }
     }
 
@@ -54,7 +50,7 @@ public class Calculator {
         this.operator = operator;
     }
 
-    public String getResult() {
+    public double getResult() {
         return result;
     }
 

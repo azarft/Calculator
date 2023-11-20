@@ -82,20 +82,20 @@ public class HelloController {
 
         calc.setOp2(d);
 
-        calc.calculate();
-
-        String result = calc.getResult();
-        inputField.setText(result);
+        try {
+            calc.calculate();
+            String result = String.valueOf(calc.getResult());
+            inputField.setText(result);
+        }
+        catch (DivisionByZeroException ex){
+            inputField.setText(ex.getMessage());
+        }
     }
 
     @FXML
     protected void onButtonClearClick(){
 
         calc.setOp2(0);
-
-        calc.calculate();
-
-        inputField.setText("");
     }
 
     @FXML
